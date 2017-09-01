@@ -1,0 +1,109 @@
+/*police de caractére*/
+@font-face {
+    font-family: 'cac_champagneregular';
+    src: url('cac_champagne-webfont.eot');
+    src: url('cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cac_champagne-webfont.woff2') format('woff2'),
+         url('cac_champagne-webfont.woff') format('woff'),
+         url('cac_champagne-webfont.ttf') format('truetype'),
+         url('cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+	font-weight: normal;
+    font-style: normal;
+
+}
+
+/*insertion du fond d'écran + auto ajuste */
+body
+{
+	background: url(riziere.jpg ) scroll no-repeat;
+	background-size: cover;
+}
+
+/*police, couleur, ombre, taille*/
+h1
+{
+	font-family: 'cac_champagneregular', Arial, serif;
+	font-size: 3.0em;
+	color: #632816;
+	text-shadow: 0.02em 0.02em 0.04em black;
+}
+
+/* centrer le h1 et le p*/
+#centrer
+{
+	text-align: center;
+}
+
+/* italic + taille pour la balise job*/
+.job
+{
+	font-size: 1.1em;
+	font-style: italic;
+}
+
+/*img flottante à droite*/
+.imageflottante
+{
+	float:right;
+}
+
+/*séparation des h2 + couleur*/
+h2
+{
+	color: #D96C32;
+	text-decoration: underline;
+}
+
+/*disposition en colonne*/
+#conteneur
+{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+/*dimentionnement des objets*/
+.element:nth-child(1),.element:nth-child(2),.element:nth-child(3)
+
+{
+	flex:1;
+	min-width: 10%;
+	max-width: 30%;
+	overflow: auto;
+}
+
+/*insertion du lisere*/
+#lisere
+{
+
+    float:left;
+   	height: 800px;
+    width: 10%;
+    background-image:url("lisere.jpg");
+    border-radius: 3% 50%;
+    opacity: 0.6;
+}
+
+/*redimentionnement du site*/
+@media screen and (max-width: 1024px)
+{
+	/*faire disparaitre le lisere*/
+    #lisere
+    {
+    	display: none;
+    }
+
+    /*mettre les objets en vertical*/
+    #conteneur
+    {
+    	display: flex;
+    	flex-direction: column;
+    }
+
+    /*redimentionner la vertical*/
+    .element:nth-child(1),.element:nth-child(2),.element:nth-child(3)
+    {
+		min-width: 100%;
+		max-width: 100%;
+    }
+}
